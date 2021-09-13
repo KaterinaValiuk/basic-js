@@ -1,3 +1,4 @@
+/*jshint esversion: 8 */
 import { NotImplementedError } from '../extensions/index.js';
 
 /**

@@ -1,3 +1,5 @@
+/*jshint esversion: 8 */
+
 import { NotImplementedError } from '../extensions/index.js';
 
 /**
@@ -13,7 +15,19 @@ import { NotImplementedError } from '../extensions/index.js';
  * createDreamTeam(['Olivia', 1111, 'Lily', 'Oscar', true, null]) => 'LOO'
  *
  */
-export default function createDreamTeam(/* members */) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
+
+ //let members = ['Olivia', 1111, 'Lily', 'Oscar', true, null];
+export default function (createDreamTeam) {
+  new NotImplementedError('Not implemented');
+  let arr = [];
+  if (createDreamTeam === null || createDreamTeam === undefined) {return false;}
+  for (let i = 0; i < createDreamTeam.length; i++) {
+    if (typeof createDreamTeam[i] === "string") {
+      arr.push(createDreamTeam[i].trimStart()[0]);
+    } 
+  }
+  if (arr === []) {return false;}
+  return arr.sort().join('').toUpperCase();
+  
 }
+//createDreamTeam(members);
