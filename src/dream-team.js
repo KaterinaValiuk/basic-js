@@ -27,7 +27,8 @@ export default function (createDreamTeam) {
     } 
   }
   if (arr === []) {return false;}
-  return arr.sort().join('').toUpperCase();
+  let result =  arr.sort().join('').toUpperCase();
+  return result.split('').sort().join('');
   
 }
 //createDreamTeam(members);
